@@ -13,12 +13,12 @@ ctx.lineJoin = ctx.lineCap = 'round';
 
 var isDrawing, points = [ ];
 
-el.ontouchstart = function(e) {
+el.onmousedown = function(e) {
   isDrawing = true;
   points.push({ x: e.clientX, y: e.clientY });
 };
 
-el.ontouchmove = function(e) {
+el.onmousemove = function(e) {
   if (!isDrawing) return;
   
   points.push({ x: e.clientX, y: e.clientY });
@@ -47,7 +47,7 @@ el.ontouchmove = function(e) {
   ctx.stroke();
 };
 
-el.ontouchend = function() {
+el.onmouseup = function() {
   isDrawing = false;
   points.length = 0;
 };
