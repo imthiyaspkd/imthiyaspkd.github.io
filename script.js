@@ -8,7 +8,7 @@ function midPointBtw(p1, p2) {
 var el = document.getElementById('c');
 var ctx = el.getContext('2d');
 
-ctx.lineWidth = 10;
+ctx.lineWidth = 2;
 ctx.lineJoin = ctx.lineCap = 'round';
 
 var isDrawing, points = [ ];
